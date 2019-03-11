@@ -1,0 +1,38 @@
+<script>
+let n = Number(prompt("enter number of member"));
+a=[];
+sum=0;
+c =[];
+for(let i=0;i<n;i++){
+  a.push((Number(prompt(`enter ${i+1} person's amount`))));
+  sum=sum+a[i];  
+}
+mean=sum/n;
+for(let i=0;i<n;i++){
+  if(a[i]<mean){
+       temp={
+        key: i+1,
+        value : mean-a[i] 
+       };
+      c.push(temp);
+  }
+}
+for(let i=0;i<n;i++){
+  if(a[i]>mean){
+      temp = a[i]-mean;
+    c.map((item,index)=>{
+        if(temp>=item.value){
+            console.log(item.key+"-- have to give "+item.value+" to "+(i+1));
+            temp -= item.value;
+            c[index].value=0;
+        } else {
+            if(temp != 0){
+                console.log(item.key+"-- have to give "+temp+" to "+(i+1)); 
+                c[index].value = c[index].value-temp;
+                temp = 0;
+            }
+        }
+    })
+  }
+}
+</script>
