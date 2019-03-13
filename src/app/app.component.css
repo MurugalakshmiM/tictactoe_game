@@ -1,0 +1,44 @@
+#grid {
+    width: 368px;
+    margin: 0 auto;
+    border: 10px solid grey;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    font-size: 50px;
+    background-color: #666;
+    grid-gap: 3px;
+}
+#grid1{
+    width: 368px;
+    margin: 0 auto;
+    border: 2px solid grey;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    font-size: 50px;
+    background-color: #666;
+    grid-gap: 3px;
+}
+#grid .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+}
+#grid1 .base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+}
+#grid .player1{
+    background-color: blue;
+}
+#grid .player2{
+    background-color:purple;
+}
